@@ -86,7 +86,12 @@ def main():
         row_str = ' ' * body_indent
 
         row_str += ', '.join(['0x' + format(b, '02x') for b in row['data']])
-        row_str += ' ' if row_idx == len(output_code['rows']) - 1 else ','
+
+        if row_idx == len(output_code['rows']) - 1:
+            row_str += ' ' * (((owidth - len(row['data'])) * 6) + 1)
+        else:
+            row_str += ', '
+
         row_str += ' // 0x%s\n' % format(row['offset'], '08x')
 
         formatted_code += row_str
