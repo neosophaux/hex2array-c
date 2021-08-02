@@ -47,8 +47,7 @@ try:
 except Exception as e:
     if isinstance(e, IndexError):
         usage(1, 'missing parameters')
-
-    raise e
+    
     usage(1, str(e))
 
 # opening brace convention - adjust as you please.
