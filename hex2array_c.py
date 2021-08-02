@@ -58,7 +58,7 @@ else:
 
 body_indent = 4
 output_code = {
-    'header': 'const uint8_t %s[%d]',
+    'header': 'const char %s[%d]',
     'rows': [{
         'offset': 0,
         'data': []
