@@ -85,7 +85,7 @@ def main():
     for row_idx, row in enumerate(output_code['rows']):
         row_str = ' ' * body_indent
 
-        row_str += ', '.join(['0x' + format(b, '02x') for b in row['data']])
+        row_str += ','.join(['0x' + format(b, '02x') for b in row['data']])
 
         if row_idx == len(output_code['rows']) - 1:
             row_str += ' ' * (((owidth - len(row['data'])) * 6) + 1)
